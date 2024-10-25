@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: swiggy-deploy
+  name: swiggy-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swiggy-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: swiggy-deploy
+    spec:
+      containers:
+      - image: fir3eye/swiggy:latest
+        name: swiggy
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
