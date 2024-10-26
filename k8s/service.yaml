@@ -4,10 +4,10 @@ metadata:
   creationTimestamp: null
   labels:
     app: swiggy-deploy
-  name: swiggy-deploy
+  name: swiggy-svc
 spec:
   ports:
-  - port: 8081
+  - port: 80
     protocol: TCP
     targetPort: 3000
   selector:
